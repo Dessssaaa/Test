@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Кто ты на вечере в стиле 90-х?</title>
+<style>
+:root{--pink:#ff2d95;--cyan:#00e5ff;--yel:#ffe600;--dark:#14082d;--card:#1f0d45}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{font-family:"Trebuchet MS","DejaVu Sans",Arial,sans-serif;color:#fff;
+background:linear-gradient(180deg,#18084a 0%,#5c126e 100%) fixed;
+padding:env(safe-area-inset-top,0) 16px env(safe-area-inset-bottom,0);}
+.wrap{max-width:560px;margin:0 auto;padding:28px 0 40px}
+.tag{color:var(--cyan);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700}
+h1{font-size:34px;line-height:1.1;margin:10px 0 14px;color:var(--yel);text-shadow:3px 3px 0 var(--pink)}
+p{line-height:1.5;font-size:17px;margin:0 0 14px}
+.card{background:var(--card);border:3px solid var(--pink);border-radius:20px;padding:22px;box-shadow:6px 6px 0 #0a0020}
+button{font:inherit;cursor:pointer;color:#fff;border:3px solid var(--dark);border-radius:14px}
+.main{background:var(--pink);font-weight:700;font-size:18px;padding:14px 22px;box-shadow:4px 4px 0 var(--dark)}
+.main:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--dark)}
+.ans{display:block;width:100%;text-align:left;background:#2c1560;border-color:var(--cyan);padding:14px 16px;margin:10px 0;font-size:16px;line-height:1.35}
+.ans:hover,.ans:focus{background:#3d1d85}
+.bar{height:10px;background:#2c1560;border-radius:6px;overflow:hidden;margin-bottom:14px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--pink));transition:width .3s}
+.q{font-size:22px;line-height:1.25;margin:0 0 6px;font-weight:700}
+.count{color:var(--cyan);font-size:14px;margin-bottom:8px}
+.role{font-size:30px;color:var(--yel);margin:6px 0 10px;text-shadow:2px 2px 0 var(--pink)}
+.lbl{color:var(--cyan);font-weight:700;margin-top:6px}
+.hide{display:none}
+.link{display:inline-block;margin:6px 10px 0 0;text-decoration:none}
+.sec{background:#2c1560;border-color:var(--cyan)}
+.wrap{position:relative;z-index:1}
+.bg{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.bg svg{position:absolute;height:auto;animation:bob 4s ease-in-out infinite}
+.bg .n{position:absolute;font-size:34px;color:var(--cyan);opacity:.6;animation:bob 5s ease-in-out infinite}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@media (prefers-reduced-motion:reduce){.bg svg,.bg .n{animation:none}}
+
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="pig" viewBox="0 0 200 180">
+<path d="M42 118c-22-4-30 14-18 22 8 5 16-2 10-8" fill="none" stroke="#8a2a50" stroke-width="5" stroke-linecap="round"/>
+<ellipse cx="68" cy="166" rx="16" ry="9" fill="#4a4a5e"/>
+<ellipse cx="132" cy="166" rx="16" ry="9" fill="#4a4a5e"/>
+<ellipse cx="100" cy="122" rx="64" ry="48" fill="#ffb3cf" stroke="#8a2a50" stroke-width="4"/>
+<path d="M58 44L52 8L88 30Z" fill="#ff9fc0" stroke="#8a2a50" stroke-width="4" stroke-linejoin="round"/>
+<path d="M142 44L148 8L112 30Z" fill="#ff9fc0" stroke="#8a2a50" stroke-width="4" stroke-linejoin="round"/>
+<ellipse cx="100" cy="72" rx="56" ry="48" fill="#ffc6da" stroke="#8a2a50" stroke-width="4"/>
+<circle cx="62" cy="84" r="9" fill="#ff7fa8" opacity=".7"/>
+<circle cx="138" cy="84" r="9" fill="#ff7fa8" opacity=".7"/>
+<ellipse cx="100" cy="86" rx="22" ry="15" fill="#ff8fb5" stroke="#8a2a50" stroke-width="3.5"/>
+<ellipse cx="92" cy="86" rx="3.5" ry="6" fill="#8a2a50"/>
+<ellipse cx="108" cy="86" rx="3.5" ry="6" fill="#8a2a50"/>
+<circle cx="78" cy="64" r="6" fill="#2a1030"/><circle cx="122" cy="64" r="6" fill="#2a1030"/>
+<circle cx="80" cy="62" r="2" fill="#fff"/><circle cx="124" cy="62" r="2" fill="#fff"/>
+<path d="M90 106q10 8 20 0" fill="none" stroke="#8a2a50" stroke-width="3.5" stroke-linecap="round"/>
+</symbol></defs></svg>
+<div class="bg" aria-hidden="true">
+<svg style="width:92px;left:2%;top:5%;rotate:-8deg"><use href="#pig"/></svg>
+<svg style="width:110px;right:3%;top:10%;rotate:9deg;animation-delay:-1s"><use href="#pig"/></svg>
+<svg style="width:130px;left:-4%;top:40%;rotate:7deg;animation-delay:-2s"><use href="#pig"/></svg>
+<svg style="width:120px;right:-4%;top:50%;rotate:-7deg;animation-delay:-3s"><use href="#pig"/></svg>
+<svg style="width:100px;left:5%;bottom:3%;rotate:-5deg;animation-delay:-1.5s"><use href="#pig"/></svg>
+<svg style="width:90px;right:7%;bottom:2%;rotate:8deg;animation-delay:-2.5s"><use href="#pig"/></svg>
+<svg style="width:80px;left:38%;top:1%;rotate:6deg;animation-delay:-0.5s"><use href="#pig"/></svg>
+<svg style="width:85px;right:35%;top:2%;rotate:-10deg;animation-delay:-3.5s"><use href="#pig"/></svg>
+<svg style="width:95px;left:-3%;top:22%;rotate:-6deg;animation-delay:-1.2s"><use href="#pig"/></svg>
+<svg style="width:100px;right:-3%;top:28%;rotate:10deg;animation-delay:-2.2s"><use href="#pig"/></svg>
+<svg style="width:90px;left:-3%;top:66%;rotate:8deg;animation-delay:-0.8s"><use href="#pig"/></svg>
+<svg style="width:105px;right:-4%;top:72%;rotate:-9deg;animation-delay:-3.2s"><use href="#pig"/></svg>
+<svg style="width:85px;left:40%;bottom:1%;rotate:-4deg;animation-delay:-1.8s"><use href="#pig"/></svg>
+<svg style="width:75px;left:20%;top:12%;rotate:12deg;animation-delay:-2.8s"><use href="#pig"/></svg>
+<svg style="width:75px;right:20%;bottom:12%;rotate:-12deg;animation-delay:-0.3s"><use href="#pig"/></svg>
+<span class="n" style="left:30%;top:3%">♪</span>
+<span class="n" style="right:28%;top:6%;animation-delay:-2s">♫</span>
+<span class="n" style="left:22%;bottom:5%;animation-delay:-1s">♬</span>
+<span class="n" style="right:24%;bottom:7%;animation-delay:-3s">♪</span>
+</div>
+<div class="wrap">
+
+<section id="start" class="card">
+  <div class="tag">Вечер в стиле 90-х · конец ноября</div>
+  <h1>Кто ты на вечере 90-х?</h1>
+  <p>Магнитофоны, мощные басы и атмосфера, которую ты запомнишь. Ответь на шесть вопросов и узнай, какая роль тебе подходит.</p>
+  <button class="main" id="go">Начать</button>
+</section>
+
+<section id="quiz" class="card hide">
+  <div class="bar"><i id="prog"></i></div>
+  <div class="count" id="count"></div>
+  <h2 class="q" id="qtext"></h2>
+  <div id="answers"></div>
+</section>
+
+<section id="result" class="card hide">
+  <div class="tag">Твоя роль на вечере</div>
+  <div class="role" id="rname"></div>
+  <p id="rdesc"></p>
+  <div class="lbl">На вечеринке:</div>
+  <p id="rparty"></p>
+  <div class="lbl">Приходи!</div>
+  <p>Мы собираем всех в конце ноября. Будут музыка, жетончики, угощение и сюрприз, о котором мы пока молчим.</p>
+  <button class="main sec" id="again">Пройти заново</button>
+</section>
+
+</div>
+<script>
+var ROLES = {
+  A:{n:"Диджей-дабстепер",
+     d:"Ты чувствуешь музыку всем телом. Если бас не ощущается в груди, значит, играет что-то не то.",
+     p:"Ты первым выйдешь к колонкам и будешь ловить ритм, даже когда все ещё только разбирают места."},
+  B:{n:"Знаток 90-х",
+     d:"Ты узнаёшь песню с первой ноты и всегда можешь сказать, кто её пел и в каком году она вышла.",
+     p:"Пока другие напевают «ну это же то самое», ты уже назвал исполнителя и отметил клетку."},
+  C:{n:"Охотник за главным призом",
+     d:"Ты азартный и не любишь отступать. Если есть приз, ты точно будешь бороться за него до конца.",
+     p:"Твои жетончики будут копиться быстрее всех, а взгляд будет прикован к главному призу."},
+  D:{n:"Душа компании",
+     d:"Ты приходишь с друзьями, находишь общий язык со всеми и создаёшь настроение там, где появляешься.",
+     p:"Ты станешь тем, кто знакомит соседей по столу, угощает всех и громче всех болеет за чужую победу."}
+};
+
+var QS = [
+ {q:"Какая мелодия стоит у тебя на будильнике?",
+  a:[["Что-нибудь с мощным басом","A"],["Хит из прошлого, который узнаю сразу","B"],["Самая громкая, чтобы точно вскочить","C"],["Я вообще не ставлю будильник, меня будят друзья","D"]]},
+ {q:"Тебе дают задание: за минуту угадать песню по первым нотам. Твои действия?",
+  a:[["Закрываю глаза и слушаю ритм","A"],["Уже знаю, называю исполнителя","B"],["Выкрикиваю первым, даже если не уверен","C"],["Смотрю на друзей: вдруг кто-то знает","D"]]},
+ {q:"Идеальный вечер в универе это…",
+  a:[["Громкая музыка и свет","A"],["Старые песни, под которые все подпевают","B"],["Соревнование с призами","C"],["Вкусная еда и весёлая компания","D"]]},
+ {q:"Тебе выдали десять жетончиков. Что делаешь?",
+  a:[["Раздаю тем, у кого лучше всех получается играть","A"],["Берегу, пока не пойму, на что их лучше потратить","B"],["Коплю все, чтобы забрать главное","C"],["Делюсь с друзьями, вдруг им нужнее","D"]]},
+ {q:"Как ты ведёшь себя на любом конкурсе?",
+  a:[["Включаюсь только если играет хорошая музыка","A"],["Вспоминаю все факты, какие знаю","B"],["Иду к победе, остальное неважно","C"],["Главное, чтобы всем было весело","D"]]},
+ {q:"Какое слово лучше всего описывает тебя?",
+  a:[["Бас","A"],["Эрудит","B"],["Азарт","C"],["Друзья","D"]]}
+];
+
+var i=0, score={A:0,B:0,C:0,D:0};
+function $(id){return document.getElementById(id)}
+function show(id){["start","quiz","result"].forEach(function(s){$(s).classList.toggle("hide",s!==id)});window.scrollTo(0,0)}
+
+function render(){
+  var q=QS[i];
+  $("count").textContent="Вопрос "+(i+1)+" из "+QS.length;
+  $("prog").style.width=(i/QS.length*100)+"%";
+  $("qtext").textContent=q.q;
+  var box=$("answers"); box.innerHTML="";
+  q.a.forEach(function(x){
+    var b=document.createElement("button");
+    b.className="ans"; b.textContent=x[0];
+    b.onclick=function(){score[x[1]]++; i++; i<QS.length?render():finish()};
+    box.appendChild(b);
+  });
+}
+function finish(){
+  var best="A";
+  ["A","B","C","D"].forEach(function(k){if(score[k]>score[best])best=k});
+  var r=ROLES[best];
+  $("rname").textContent=r.n; $("rdesc").textContent=r.d; $("rparty").textContent=r.p;
+  $("prog").style.width="100%";
+  show("result");
+}
+$("go").onclick=function(){i=0;score={A:0,B:0,C:0,D:0};show("quiz");render()};
+$("again").onclick=function(){show("start")};
+</script>
+</body>
+</html>
